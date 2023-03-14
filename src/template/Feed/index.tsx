@@ -7,7 +7,7 @@ const ExampleTemplate = () => {
         <S.Container>
             <S.Title>Treinamento Introdutório de Front</S.Title>
             <S.Comment>Template criado em Março de 2023</S.Comment>
-            <ExampleComponent />
+            <ExampleComponent width="128px" />
         </S.Container>
     );
 };
