@@ -1,20 +1,15 @@
-# ✨ NextJS project template
-
-This is a NextJs template for initiate projects!
+# ✨ Nova sugestão de template (beta---), Next.js 15+ com Tailwind
+É um template para projetos altamente customizáveis e rápidos de montar
 
 What is included?
 
+- Tailwind
 - TypeScript
-- Styled-components
-- Storybook
 - Husky
 - Eslint
 - Prettier
 - Jest
 - React-Testing Library
-- Radix
-- Stitches
-- Chromatic
 
 ## 🧿 How to use
 Use this repository as template for your project and run:
@@ -38,9 +33,14 @@ Or use as template when creating your new repository
 
 To run storybook use: `yarn storybook`
 
-## 🕹 Other Setups
+# Motivação e vantagens
+sou apenas um trainee e gostaria muito de fazer parte do research para entender melhor como é realmente o desenvolvimento dos analistas, quais suas principais dificuldades e vantagens em usar esse template antigo. esse template reflete apenas a minha experiência prévia com dev web e isso é o q tinha em mente no geral
+A criação desse template segue 3 princípios/valores:
+- Agilidade
+- Sustentabilidade
+- Customizabilidade
 
-This template has others configurations that use the main branch as base, to access it just go for the branch that implements what you need and use as template when creating your repository or clone it.
-
-- MaterialUI = branch: `feat/MaterialUI`
-- Next 12 + ReactQuery = branch: `feat/next12` ( This will be the main branch after some tests )
+Desvantagens para os analistas atuais:
+- Novas sintaxes e tecnologias
+Next.js pages -> app router
+Styled components -> tailwind
