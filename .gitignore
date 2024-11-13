@@ -36,3 +36,5 @@ yarn-error.log*
 # storybook-build
 .storybook-static
 .build-storybook.log
+
+*storybook.log
