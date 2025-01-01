@@ -51,9 +51,9 @@ A criação desse template segue 3 princípios/valores:
 Mudanças e possíveis desvantagens para os analistas atuais:
 
 - Novas sintaxes e tecnologias
-  Next.js pages -> app router
-  Styled components -> tailwind
-  novo jeito de usar svgs (lucide-react)
+- Next.js pages -> app router
+- Styled components -> tailwind
+- novo jeito de usar svgs (lucide-react)
 
 ## Estilização e Componentes
 
