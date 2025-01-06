@@ -1,3 +1,4 @@
+import 'material-symbols/outlined.css';
 import './globals.css';
 import localFont from 'next/font/local';
 import { Poppins } from 'next/font/google';
