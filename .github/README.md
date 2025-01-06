@@ -53,7 +53,7 @@ Mudanças e possíveis desvantagens para os analistas atuais:
 - Novas sintaxes e tecnologias
 - Next.js pages -> app router
 - Styled components -> tailwind
-- novo jeito de usar svgs (lucide-react)
+- novo jeito de usar svgs (material-symbols diretamente)
 
 ## Estilização e Componentes
 
@@ -69,7 +69,7 @@ Foi idealizada a subsituição dos styled-components por uma biblioteca chamada 
 
 Além dessas funções base, onde o tailwind brilha é nas ferramentas como a sua [extensão para o vscode](https://marketplace.visualstudio.com/items?itemName=bradlc.vscode-tailwindcss), onde é possível ver todas essas classes base.
 
-## App Router (Next 15.0.3/latest)
+## App Router (Next 15.1.3/latest)
 
 Apesar do pages router também ser sustentado a longo termo pela Vercel, as atualizações e melhoramentos que estão sendo desenvolvidos atualmente são para o App Router. Os seus principais "pontos" são:
 
@@ -81,10 +81,9 @@ Apesar do pages router também ser sustentado a longo termo pela Vercel, as atua
 - Turbopack - substituto do webpack (no caminho de se tornar para o next) feito em rust, atualmente outperforma o webpack em todos os cenários de rapidez principalmente em grandes projetos com múltiplas rotas, porém tem uma desvantagem: menos suporte (no momento) com assets estáticos (webpack brilha nisso) como o svgr, porém há planos que eles fazem em relação a isso. O terceiro ponto desse template também lida com isso
   ![turbopack](turbopack.png)
 
-## Svgr -> Lucide-react
+## Svgr -> material-symbols library
 
-[Lucide](lucide.dev) é uma biblioteca de componentes SVG que facilita (e muito) o carregamento de svgs, tendo eles como componentes React que podem ser facilmente alterados (é possível currentColor nos strokes, fill, etc.) que podem ser importados em qualquer lugar do projeto.
-![Lucide icons](lucide.png)
+O material symbols já é uma das bibliotecas de ícones mais usadas pelos designers do NTec, e nada melhor do que já conseguir importar todos esses ícones por meio de uma fonte - mudando apenas o texto!
 
 ## Lint + Formatação
 Configurei o prettier + eslint + next em um script singular, linta e formata todo o código:
