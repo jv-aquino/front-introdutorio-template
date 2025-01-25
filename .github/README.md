@@ -1,8 +1,7 @@
-# ✨ Nova sugestão de template (beta---), Next.js 15+ com Tailwind
+# ✨ Nova sugestão de template, Next.js 15+ com Tailwind
+TÁ BALA DEMAIS
 
 É um template para projetos altamente customizáveis e rápidos de montar
-
-What is included?
 
 - Tailwind
 - TypeScript
@@ -12,7 +11,7 @@ What is included?
 - Jest
 - React-Testing Library
 
-## 🧿 How to use
+## 🧿 COMO RODAR
 
 Use this repository as template for your project and run:
 
@@ -34,10 +33,6 @@ Or to run in watch mode:
 `yarn test:watch`
 
 Or use as template when creating your new repository
-
-### 📕 Storybook
-
-To run storybook use: `yarn storybook`
 
 # Motivação e vantagens - Resumo
 
