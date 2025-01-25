@@ -4,6 +4,7 @@ import api from "./api";
 import { cookies } from "next/headers";
 
 // COOKIES SETADOS NO SERVER-SIDE (AINDA ESTÃO NO BROWSER MAS SÃO SETADOS DE FORMA ASÍNCRONA)
+// cuidado com o darkMode também que tá sendo setado como true por padrão (linha 59)
 async function setAuthCookies(token: string, userId: string, darkMode: boolean | null): Promise<void> {
   const cookieStore = await cookies();
   cookieStore.set('@app:token', token, { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'strict', path: '/' });
@@ -55,7 +56,7 @@ async function login(data: UserLogin) {
       throw new Error('Internal Server Error');
     }
 
-    await setAuthCookies(response.token, response.user.id, response.user.darkMode);
+    await setAuthCookies(response.token, response.user.id, true);
 
     api.defaults.headers.Authorization = `Bearer ${response.token}`;
 

@@ -5,6 +5,7 @@ import { Poppins } from 'next/font/google';
 
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
+import { ToastProvider } from '@/components/common/ToastProvider';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -29,15 +30,15 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children
-}: Readonly<{
-  children: ReactNode;
-}>) {
+}: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${poppins.className} antialiased`}
       >
         {children}
+        
+        <ToastProvider />
       </body>
     </html>
   );

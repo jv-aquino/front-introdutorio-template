@@ -83,3 +83,7 @@ O material symbols já é uma das bibliotecas de ícones mais usadas pelos desig
 ## Lint + Formatação
 Configurei o prettier + eslint + next em um script singular, linta e formata todo o código:
 `yarn lint-format`
+
+## NOVO: Biblioteca para indicar erros/sucesso/mensagens de info pro user (toasts)
+A biblioteca [react-hot-toast](https://react-hot-toast.com/) (muito bala por sinal) foi configurada para esse template, podendo ser usada com o toast provider e a invocação da função (de cliente) toast.error('mensagem') ou toast.success('mensagem').
+Ela padroniza e facilita muito a vida quando se tem muitas ações de user no seu projeto (como logar ou obter dados)
