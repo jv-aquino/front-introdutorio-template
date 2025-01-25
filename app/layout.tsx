@@ -6,6 +6,7 @@ import { Poppins } from 'next/font/google';
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
 import { ToastProvider } from '@/components/common/ToastProvider';
+import ThemeProvider from '@/components/common/ThemeProvider';
 
 const geistSans = localFont({
   src: './fonts/GeistVF.woff',
@@ -33,13 +34,12 @@ export default function RootLayout({
 }: { children: ReactNode }) {
   return (
     <html lang="pt-BR">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.className} antialiased`}
-      >
+      { /*theme provider é o body, passe as classes de fontes e tal igual no next normalmente */}
+      <ThemeProvider className={`${geistSans.variable} ${geistMono.variable} ${poppins.className} antialiased`}>
         {children}
         
         <ToastProvider />
-      </body>
+      </ThemeProvider>
     </html>
   );
 }
