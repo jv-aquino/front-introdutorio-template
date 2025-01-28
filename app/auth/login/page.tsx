@@ -18,7 +18,7 @@ function LoginPage() {
       const user = await login({ email, password });
 
       if (user) {
-        toast.success(`Bem-vindo de volta, ${user.name || 'usuário'}!`);
+        toast.success(`Bem-vindo de volta, ${user.firstName || 'usuário'}!`);
         router.push('/');
       }
     } catch (error: any) {
@@ -43,7 +43,7 @@ function LoginPage() {
             type="email"
             name="email"
             id="email"
-            placeholder="Email"
+            placeholder="Email (joao.aquino@polijunior.com.br)"
             className="login__input"
             onChange={(e) => setEmail(e.target.value)}
             value={email}
@@ -54,7 +54,7 @@ function LoginPage() {
               type="password"
               name="password"
               id="password"
-              placeholder="Password"
+              placeholder="Password (senha)"
               className="login__input"
               onChange={(e) => setPassword(e.target.value)}
               value={password}
