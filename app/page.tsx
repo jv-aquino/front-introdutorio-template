@@ -1,12 +1,26 @@
+'use client'
+import { useTheme } from '@/components/common/ThemeProvider';
+import { Moon, Sun } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Home() {
+  const { theme, setTheme } = useTheme();
+
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+      <button 
+        className='absolute top-6 right-6 transition-colors'
+        onClick={() => {
+          setTheme(theme === 'dark' ? 'default' : 'dark');
+        }}
+      >
+        
+        {theme === 'dark' ? <Moon className='w-9 h-9' /> : <Sun className='w-9 h-9' />}
+      </button>
       <main className="flex flex-col gap-8 row-start-2 items-center">
-        <p className='flex gap-4 items-center text-2xl font-bold text-blue-700'>
+        <p className='flex gap-4 items-center text-2xl font-bold text-blue-700 h-[148px]'>
           <Image
-            src="/images/logo.png"
+            src={"/images/" + (theme === 'dark' ? "logo.png" : "logo_azul.png")}
             alt="Next.js logo"
             width={180}
             height={148}
@@ -27,13 +41,17 @@ export default function Home() {
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
+            className="block text-center rounded-full 
+            border border-solid border-transparent transition-colors bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] 
+            text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-5 sm:min-w-44 hover:text-gray-800 dark:hover:text-blue-950"
             href="/protegido"
           >
             PÁGINA PROTEGIDA (SÓ PODE LOGADO)
           </a>
           <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
+            className="block text-center rounded-full 
+            border border-solid border-black/[.08] dark:border-white/[.145] transition-colors hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent 
+            text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-5 sm:min-w-44 hover:text-white"
             href="/auth/login"
           >
             LOGAR
