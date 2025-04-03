@@ -1,0 +1,8 @@
+{
+  "components": {
+    "SwitchThemeButton": {
+      "path": "./components/pjlib/SwitchThemeButton",
+      "enabled": true
+    }
+  }
+}

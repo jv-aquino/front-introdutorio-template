@@ -10,7 +10,7 @@ async function setAuthCookies(token: string, userId: string, darkMode: boolean |
   cookieStore.set('@app:token', token, { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'strict', path: '/' });
   cookieStore.set('@app:userId', userId, { httpOnly: true, secure: process.env.NODE_ENV === 'production', sameSite: 'strict', path: '/' });
   if (darkMode !== null) {
-    cookieStore.set('@app:darkMode', darkMode ? 'true' : '', { sameSite: 'lax', path: '/' });
+    cookieStore.set('dark_mode', darkMode ? 'true' : '', { sameSite: 'lax', path: '/' });
   }
 }
 

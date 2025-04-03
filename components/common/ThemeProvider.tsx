@@ -5,21 +5,27 @@ import {
   useContext,
   useEffect,
   useState,
-  ReactNode
+  ReactNode,
+  Dispatch,
+  SetStateAction
 } from 'react';
 import { getCookie, setCookie } from '@/services/cookies';
 
-const ThemeContext = createContext({
-  theme: 'default',
-  setTheme: (theme: string) => {}
-});
+interface ThemeContextType {
+  theme: 'dark' | 'default';
+  setTheme: Dispatch<SetStateAction<'dark' | 'default'>>;
+}
 
+export const ThemeContext = createContext<ThemeContextType>({
+  theme: 'default',
+  setTheme: () => {}
+});
 export function useTheme() {
   return useContext(ThemeContext);
 }
 
 function ThemeProvider({ className, children }: { className: string, children: ReactNode }) {
-  const [theme, setTheme] = useState('default');
+  const [theme, setTheme] = useState<'dark' | 'default'>('default');
 
   useEffect(() => {
     const darkMode = getCookie('dark_mode') === 'true';
