@@ -3,6 +3,10 @@
     "SwitchThemeButton": {
       "path": "./components/pjlib/SwitchThemeButton",
       "enabled": true
+    },
+    "ToastProvider": {
+      "path": "./components/pjlib/ToastProvider",
+      "enabled": true
     }
   }
 }

@@ -5,7 +5,7 @@ import { Poppins } from 'next/font/google';
 
 import type { ReactNode } from 'react';
 import type { Metadata } from 'next';
-import { ToastProvider } from '@/components/common/ToastProvider';
+import { ToastProvider } from '@/components/pjlib/ToastProvider';
 import ThemeProvider from '@/components/common/ThemeProvider';
 
 const geistSans = localFont({
