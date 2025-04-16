@@ -1,13 +1,9 @@
-@import url('./variables.css') layer(base);
 @import 'tailwindcss';
-
-@theme {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-}
+@custom-variant dark (&:where(.dark, .dark *));
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'Poppins', sans-serif;
+  @apply bg-slate-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50;
 }

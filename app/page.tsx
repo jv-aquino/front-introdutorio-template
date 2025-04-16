@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <SwitchThemeButton theme={theme} setTheme={setTheme} />
+      <SwitchThemeButton className='absolute top-6 right-6' iconClassName='h-7 w-7' theme={theme} setTheme={setTheme} />
       
       <main className="flex flex-col gap-8 row-start-2 items-center">
         <p className='flex gap-4 items-center text-2xl font-bold text-blue-700 h-[148px]'>
@@ -37,15 +37,15 @@ export default function Home() {
           <a
             className="block text-center rounded-full 
             border border-solid border-transparent transition-colors bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] 
-            text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-5 sm:min-w-44 hover:text-gray-800 dark:hover:text-blue-950"
+            text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-5 sm:min-w-44 hover:text-slate-100 dark:hover:text-blue-900"
             href="/protegido"
           >
             PÁGINA PROTEGIDA (SÓ PODE LOGADO)
           </a>
           <a
             className="block text-center rounded-full 
-            border border-solid border-black/[.08] dark:border-white/[.145] transition-colors hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent 
-            text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-5 sm:min-w-44 hover:text-white"
+            border border-solid border-black/[.14] dark:border-white/[.145] transition-colors hover:bg-zinc-200 dark:hover:bg-[#1a1a1a] hover:border-transparent 
+            text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-5 sm:min-w-44 not-dark:hover:text-blue-700"
             href="/auth/login"
           >
             LOGAR

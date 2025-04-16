@@ -1,3 +1,5 @@
+@reference "tailwindcss";
+
 .login__input {
   border: 1px solid #808080;
   padding: 14px 24px;
@@ -10,5 +12,5 @@
 
 .login__button {
   padding: 13px 0;
-  @apply w-full rounded-lg font-bold text-2xl text-white bg-blue-500;
+  @apply w-full rounded-lg font-bold text-2xl text-white bg-blue-500 cursor-pointer;
 }

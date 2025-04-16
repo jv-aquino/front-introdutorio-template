@@ -12,7 +12,7 @@ function Protegido() {
 
       <button
         className="mx-4 px-4 py-2 rounded-xl transition-colors dark:bg-[#3d3d3d]
-        hover:bg-[#383838] dark:hover:bg-[#ccc] hover:text-gray-800 dark:hover:text-blue-950" 
+        hover:bg-[#383838] dark:hover:bg-gray-300 hover:text-gray-800 dark:hover:text-blue-950" 
         type="button"
         onClick={async () => {
           try {

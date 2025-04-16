@@ -1,8 +1,0 @@
-.ThemeProvider.default {
-  --background: #f4f4f9;
-  --foreground: #171717;
-}
-.ThemeProvider.dark {
-  --background: #0a0a0a;
-  --foreground: #ededed;
-}

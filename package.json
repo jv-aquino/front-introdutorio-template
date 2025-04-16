@@ -39,7 +39,7 @@
     "postcss": "^8",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.11",
-    "tailwindcss": "^4.1.4",
+    "tailwindcss": "^4",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   }
