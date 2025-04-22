@@ -1,9 +1,13 @@
 @reference "tailwindcss";
+/* fazendo o @apply funcionar
+ você também pode usar css normal sem nenhum problema caso seja mais prático no caso
+ mas tente manter a consistência com o tailwind na maior parte do projeto */
 
 .login__input {
-  border: 1px solid #808080;
   padding: 14px 24px;
-  @apply w-full rounded-lg;
+  width: 100%;
+  border: 1px solid #808080;
+  border-radius: 8px;
 }
 .login__input::placeholder {
   font-size: 16px;
@@ -12,5 +16,6 @@
 
 .login__button {
   padding: 13px 0;
-  @apply w-full rounded-lg font-bold text-2xl text-white bg-blue-500 cursor-pointer;
+  width: 100%;
+  @apply rounded-lg font-bold text-2xl text-white bg-blue-500 cursor-pointer;
 }

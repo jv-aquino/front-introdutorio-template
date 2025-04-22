@@ -1,9 +1,53 @@
 @import 'tailwindcss';
 @custom-variant dark (&:where(.dark, .dark *));
+/* você pode criar quantas variantes quiser para aplicar classes no tailwind
+mais sobre variantes no final da primeira utility
+https://tailwindcss.com/docs/adding-custom-styles#adding-custom-variants */
+
+@theme {
+  /* https://tailwindcss.com/docs/theme, https://tailwindcss.com/docs/adding-custom-styles#customizing-your-theme
+  - variáveis customizadas no tailwind que funcionam para todas as outras funções do tailwind
+  existem alguns tipos de customizações, como cores, fontes, tamanhos, breakpoints (de telas/responsividade) e etc
+  dá uma olhada na documentação
+  */
+  --color-corCustomizada: #f8fafc;
+  --font-poppins: 'Poppins', sans-serif;
+}
+
+/* utility é literalmente uma declaração de classe css (no tailwind) com algumas vantagens, como documentação automática ao redor do projeto
+https://tailwindcss.com/docs/styling-with-utility-classes */
+@utility botaoRedondoInicial {
+  display: block;
+  text-align: center;
+  font-size: var(--text-sm);
+
+  padding: 8px 16px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 999px; /* redondo */
+
+  transition-duration: .2s;
+  transition-property: color, background-color, border-color;
+  @variant sm {
+    min-width: 176px;
+    padding: 12px 20px;
+    font-size: var(--text-base);
+  }
+  /* variantes servem para @media, pseudo elementos, eventos (como hover) e muito mais! é uma parte incrível do tailwind 
+  https://tailwindcss.com/docs/adding-custom-styles#using-variants */
+}
+@utility nextJsLinks {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  @variant hover {
+    text-decoration-line: underline;
+    text-underline-offset: 4px;
+  }
+}
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: 'Poppins', sans-serif;
-  @apply bg-slate-50 dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50;
+  /* @apply puramente aplica classes css em um seletor, tendo um detalhe:
+  por não ser algo 100% ideal, ela só funciona no root ou em arquivos que usem @reference 'tailwindcss' */
+  @apply font-poppins bg-corCustomizada dark:bg-zinc-950 text-zinc-900 dark:text-zinc-50;
 }

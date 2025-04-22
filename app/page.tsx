@@ -1,18 +1,17 @@
 'use client'
 import { useTheme } from '@/components/common/ThemeProvider';
 import SwitchThemeButton from '@/components/pjlib/SwitchThemeButton';
-import { Moon, Sun } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Home() {
   const { theme, setTheme } = useTheme();
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
+    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
       <SwitchThemeButton className='absolute top-6 right-6' iconClassName='h-7 w-7' theme={theme} setTheme={setTheme} />
       
       <main className="flex flex-col gap-8 row-start-2 items-center">
-        <p className='flex gap-4 items-center text-2xl font-bold text-blue-700 h-[148px]'>
+        <p className='flex flex-wrap gap-4 items-center justify-center text-2xl font-bold text-blue-700 h-[148px]'>
           <Image
             src={"/images/" + (theme === 'dark' ? "logo.png" : "logo_azul.png")}
             alt="Next.js logo"
@@ -22,7 +21,7 @@ export default function Home() {
           />
           TEMPLATE DA MELHOR ÁREA DA PJ E TALVEZ ATÉ DO NTEC
         </p>
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
+        <ol className="list-inside list-decimal text-sm text-center sm:text-left">
           <li className="mb-2">
             Get started by editing{' '}
             <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded-sm font-semibold">
@@ -35,17 +34,15 @@ export default function Home() {
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
           <a
-            className="block text-center rounded-full 
-            border border-solid border-transparent transition-colors bg-foreground text-background hover:bg-[#383838] dark:hover:bg-[#ccc] 
-            text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-5 sm:min-w-44 hover:text-slate-100 dark:hover:text-blue-900"
+            className="botaoRedondoInicial border-transparent bg-foreground text-background 
+            hover:bg-[#383838] dark:hover:bg-[#ccc] hover:text-slate-100 dark:hover:text-blue-900"
             href="/protegido"
           >
             PÁGINA PROTEGIDA (SÓ PODE LOGADO)
           </a>
           <a
-            className="block text-center rounded-full 
-            border border-solid border-black/[.14] dark:border-white/[.145] transition-colors hover:bg-zinc-200 dark:hover:bg-[#1a1a1a] hover:border-transparent 
-            text-sm sm:text-base py-2 sm:py-3 px-4 sm:px-5 sm:min-w-44 not-dark:hover:text-blue-700"
+            className="botaoRedondoInicial border-black/[.14] dark:border-white/[.145] 
+            hover:bg-zinc-200 dark:hover:bg-[#1a1a1a] hover:border-transparent not-dark:hover:text-blue-700"
             href="/auth/login"
           >
             LOGAR
@@ -54,7 +51,7 @@ export default function Home() {
       </main>
       <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="nextJsLinks"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
@@ -62,7 +59,7 @@ export default function Home() {
           Learn
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="nextJsLinks"
           href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
@@ -70,7 +67,7 @@ export default function Home() {
           Examples
         </a>
         <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
+          className="nextJsLinks"
           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
           target="_blank"
           rel="noopener noreferrer"
